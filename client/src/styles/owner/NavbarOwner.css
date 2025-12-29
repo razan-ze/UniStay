@@ -1,0 +1,71 @@
+/* ------------------------------
+   Owner Navbar general styling
+--------------------------------*/
+.navbar-brand {
+  margin-left: -20px;
+  /* Moves the logo slightly to the left (negative margin) */
+}
+
+.owner-navbar {
+  background-color: #4A5328;
+  /* Sets the navbar background to dark olive green */
+}
+
+/* ------------------------------
+     Navbar links
+--------------------------------*/
+.owner-navbar .nav-link {
+  color: #f0f0f0; 
+  /* Link text color */
+
+  font-weight: 500; 
+  /* Makes links a bit thicker */
+
+  transition: color 0.3s;
+  /* Smooth color change when hovering */
+}
+
+
+.owner-navbar .nav-link:hover {
+  color: #e6d4a5; 
+  /* Link color on hover */
+}
+
+/* ------------------------------
+     Dropdown Menu
+--------------------------------*/
+.owner-navbar .dropdown-menu {
+  background-color: #4A5328;
+  /* Same color as navbar */
+}
+
+.owner-navbar .dropdown-item {
+  color: #f0f0f0; 
+  /* Text color */
+
+  transition: background 0.3s, color 0.3s;
+}
+
+.owner-navbar .dropdown-item:hover {
+  background-color: #3B4215; 
+  /* Hover background */
+
+  color: #e6d4a5;
+  /* Hover text color */
+}
+
+/* -----------------------------------------
+   Make PROFILE on the right side always
+------------------------------------------*/
+.navbar-right-section {
+  margin-left: auto;
+  /* Pushes profile dropdown to the right*/
+  display: flex;
+  align-items: center;
+}
+
+.navbar-toggler-icon{
+
+margin-top: 15px;
+
+}

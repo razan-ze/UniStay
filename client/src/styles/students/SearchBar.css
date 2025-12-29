@@ -1,0 +1,62 @@
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto; /* فراغ أكبر من فوق */
+  width: 75%; /* تقريباً 3/4 من العرض */
+  background: rgba(255, 255, 255, 0.9); /* شفافية خفيفة */
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus-within {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  transform: scale(1.02);
+}
+
+/* input داخل الـ SearchBar */
+.search-input {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px 0 0 30px;
+  font-size: 16px;
+  outline: none;
+  background: transparent;
+  color: #3B2F2F; /* Deep brown text */
+  transition: all 0.3s ease;
+}
+
+/* Placeholder animation */
+.search-input::placeholder {
+  color: #8C8073; /* Dark grayish */
+  transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+.search-input:focus::placeholder {
+  transform: translateY(-25px);
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* زر البحث */
+.search-button {
+  padding: 12px 25px;
+  border: none;
+  background-color: #B6974D; /* Mustard / golden */
+  color: white;
+  border-radius: 0 30px 30px 0;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.search-button:hover {
+  background-color: #9D8340; /* أغمق شوي عند hover */
+  transform: scale(1.05);
+}
+
+/* إضافة margin تحت الـ SearchBar */
+.search-container {
+  margin-bottom: 40px;
+}

@@ -1,0 +1,260 @@
+.student-navbar {
+  /* Student pages navbar */
+  position: sticky; /* better than fixed here */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background-color: #4A5328;
+  padding: 0.7rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;      /* above other content */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+
+.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* المسافة بين العناصر */
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  height: 70px;
+  margin-right: 0.5rem;
+}
+
+.profession-text {
+  color: #f0f0f0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.home-link {
+  color: #f0f0f0;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.home-link:hover {
+  color: #cddc39;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+}
+
+.icon-link .icon {
+  width: 26px;
+  height: 26px;
+  transition: transform 0.2s;
+}
+
+.icon-link:hover .icon {
+  transform: scale(1.1);
+}
+
+
+
+.nav-fav {
+  position: relative;
+  cursor: pointer;
+}
+
+.fav-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: #B6974D;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+/* زر Login مثل زر البحث */
+.login {
+  background-color: #B6974D; /* نفس لون زر البحث */
+  color: white; /* نص أبيض */
+  border: none;
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-weight: 600;
+  margin-left: 15px; /* مسافة عن أيقونة Home */
+  transition: all 0.3s ease;
+  text-decoration: none;
+ text-align: center;
+ margin-left: -10px;
+}
+
+.login:hover {
+  background-color: #debc6b ; /* لون داكن عند hover */
+  color: white;
+  transform: translateY(-2px);
+}
+
+.profile{
+  background-color: #B6974D; /* نفس لون زر البحث */
+  color: white; /* نص أبيض */
+  border: none;
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-weight: 600;
+  margin-left: 15px; /* مسافة عن أيقونة Home */
+  transition: all 0.3s ease;
+  text-decoration: none;
+ text-align: center;
+ margin-left: -10px;
+}
+
+.profile:hover{
+background-color: #debc6b ; /* لون داكن عند hover */
+  color: white;
+  transform: translateY(-2px);
+
+
+}
+.nav-item.dropdown {
+  list-style: none; /* remove bullet from this li only */
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-right {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+}
+.favorites-count {
+  position: absolute;
+  top: -5px;        /* شوية لفوق */
+  right: -5px;      /* شوية لليمين */
+  background: white; /* لون أبيض */
+  color: #B6974D;   /* لون الرقم حسب تصميمك */
+  font-size: 10px;   /* أصغر */
+  padding: 2px 5px;
+  border-radius: 50%;
+  font-weight: 700;
+  border: 1px solid #B6974D; /* خط محيط */
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+
+.navbar-toggler {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  align-items: center;  /* vertical centering */
+  justify-content: center;
+}
+
+.toggler-icon {
+  width: 25px;
+  height: 2px;
+  margin-top: -60px;
+  background-color: #333;
+  position: relative;
+}
+
+.toggler-icon::before,
+.toggler-icon::after {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: #333;
+  position: absolute;
+  left: 0;
+  transition: 0.3s;
+}
+
+.toggler-icon::before {
+  top: -8px;
+}
+
+.toggler-icon::after {
+  top: 8px;
+}
+
+/* Show hamburger only on small screens */
+@media (max-width: 768px) {
+  .navbar-toggler {
+    display: flex;        /* show hamburger */
+    margin-left: auto;    /* push to far right */
+
+  }
+
+  .navbar-right {
+    display: none;        /* hide menu by default */
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;          /* take full width on mobile */
+  }
+
+  .navbar-right.show {
+    display: flex;        /* show when hamburger clicked */
+    
+  }
+}
+/* -----------------------------------------
+   Make PROFILE on the right side always
+------------------------------------------*/
+.navbar-right-section {
+  margin-left: auto;
+  /* Pushes profile dropdown to the right*/
+  display: flex;
+  align-items: center;
+}
+
+
+
+/* ------------------------------
+     Dropdown Menu
+--------------------------------*/
+
+.student-navbar .dropdown-menu {
+  background-color: #4A5328;
+  /* Same color as navbar */
+}
+
+.student-navbar .dropdown-item {
+  color: #f0f0f0; 
+  /* Text color */
+
+  transition: background 0.3s, color 0.3s;
+}
+
+.student-navbar .dropdown-item:hover {
+  background-color: #3B4215; 
+  /* Hover background */
+
+  color: #e6d4a5;
+  /* Hover text color */
+}

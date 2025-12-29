@@ -1,0 +1,9 @@
+/* ===== FOOTER ===== */
+.footer {
+  background-color: #f5f5dc; /* light beige footer */
+  border-top: 1px solid #e0e0c0; /* subtle top border */
+  margin-top: 1000px; /* spacing from content */
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}

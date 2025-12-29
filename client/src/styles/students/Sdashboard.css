@@ -1,0 +1,37 @@
+.student-dashboard-page {
+  padding-top: 80px; /* adjust to navbar height */
+  background-color: #FAF9F4;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding-bottom: 120px;
+  position: relative;
+}
+
+
+.student-dashboard-page footer{
+position: absolute;
+bottom: 0;
+width: 100%;
+}
+
+.student-navbar {
+  background-color: #4A5328; /* Olive green navbar */
+}
+
+/* تعديل خلفية الـ cards */
+.col-md-4 .ApartmentCard {
+  background-color: #F3EED9; /* Light beige */
+  color: #3B2F2F; /* Deep brown text */
+}
+
+/* تغيير لون الأسهم */
+.swiper-button-next, .swiper-button-prev {
+  color: #B6974D; /* لون الأزرار متناسق مع الألوان الأساسية */
+}
+
+/* اختياري: تكبير الأيقونات شوي عند hover */
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  color: #9D8340;
+  transform: scale(1.2);
+}
+

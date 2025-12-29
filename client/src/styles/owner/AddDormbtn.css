@@ -1,0 +1,39 @@
+/* Add Dorm Button Styling */
+.add-dorm-btn {
+  background-color: #B6974d;   /* Button color */
+  color: #4A5328;              /* Text color */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Nice font */
+  font-weight: 600;             /* Bold text */
+  font-size: 1.1rem;            /* Slightly bigger text */
+  padding: 12px 30px;           /* Tall and wide */
+  border: none;                 /* Remove border */
+  border-radius: 8px;           /* Rounded corners */
+  transition: all 0.3s ease;    /* Smooth hover effect */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* subtle shadow */
+  text-decoration: none;        /* Remove underline */
+  display: inline-block;        /* So width/padding works well */
+  text-align: center;           /* Center text */
+  width: 50%;                  /* Default width adjusts to content */
+  display: block;             /* required for centering */
+  margin-left: auto;            /* equal left and right margin */
+  margin-right: auto;           /* equal left and right margin */
+}
+
+/* Hover effect */
+.add-dorm-btn:hover {
+  background-color: #b9994d;    /* Darker on hover */
+  color: #3B4215;               /* Darker text */
+  transform: translateY(-2px);  /* Slight lift effect */
+  box-shadow: 0 6px 8px rgba(0,0,0,0.15); /* stronger shadow */
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .add-dorm-btn {
+    width: 90%;          /* Slightly smaller than full width */
+    max-width: 100%;     /* Ensure it doesn't overflow */
+    padding: 14px 0;     /* Taller height */
+    font-size: 1.2rem;   /* Bigger font */
+  }
+}

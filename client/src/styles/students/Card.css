@@ -1,0 +1,62 @@
+.card {
+  border: 2px solid #4A5328; /* olive green */
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  background-color: #fff; /* أبيض يبرز على beige */
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.03); /* يطلع شوي ويكبر */
+  box-shadow: 0 15px 25px rgba(0,0,0,0.25); /* ظل أعمق */
+  border-color: #a2b73c; /* olive أخف شوي */
+}
+
+.carousel-inner img {
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .carousel-inner img {
+  transform: scale(1.08); /* تكبير الصورة شوي عند hover */
+}
+
+.card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+}
+
+.card-text.text-success {
+  font-weight: 600;
+}
+.btn{
+  background-color: #B6974D;
+}
+.btn-view-details {
+  background-color: #B6974D; /* اللون الأساسي - olive */
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-view-details:hover {
+  background-color: #4A5328; /* لون أغمق على hover */
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}

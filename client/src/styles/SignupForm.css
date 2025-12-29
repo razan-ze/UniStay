@@ -1,0 +1,103 @@
+/* --------------------------- */
+/* SIGNUP FORM MAIN WRAPPER   */
+/* --------------------------- */
+.signup-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #4A5328 50%, #E6D4A5 50%);
+}
+
+/* --------------------------- */
+/* SIGNUP MAIN CONTAINER       */
+/* --------------------------- */
+.signup-container {
+  width: 900px;
+  height: 520px;
+  background: #fff;
+  position: relative;
+  display: flex;
+}
+
+/* --------------------------- */
+/* BACK ARROW                  */
+/* --------------------------- */
+.back-arrow {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  color: #3B4215;
+}
+
+/* --------------------------- */
+/* LEFT PANEL                  */
+/* --------------------------- */
+.signup-left-panel {
+  width: 50%;
+  background-color: #4A5328;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  border-top-right-radius: 70px;
+  border-bottom-right-radius: 70px;
+  margin-right: 5px;
+}
+
+.signup-left-btn {
+  border: 1px solid white;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: 0.3s;
+  background: transparent;
+}
+.signup-left-btn:hover {
+  background: #fff;
+  color: #4A5328;
+}
+
+/* --------------------------- */
+/* RIGHT PANEL                 */
+/* --------------------------- */
+.signup-right-panel {
+  width: 50%;
+}
+
+.signup-header {
+  color: #3B4215;
+}
+
+/* --------------------------- */
+/* INPUTS                      */
+/* --------------------------- */
+.signup-input {
+  border: 1px solid #D8C3A5;
+  border-radius: 10px;
+}
+
+/* --------------------------- */
+/* SUBMIT BUTTON               */
+/* --------------------------- */
+.signup-submit-btn {
+  background-color: #3B4215;
+  transition: 0.3s;
+}
+.signup-submit-btn:hover {
+  background-color: #4A5328;
+}
+
+/* --------------------------- */
+/* LOGIN LINK                  */
+/* --------------------------- */
+.signup-login-link {
+  color: #4A5328;
+  font-weight: 600;
+  cursor: pointer;
+}
