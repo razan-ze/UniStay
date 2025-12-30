@@ -11,7 +11,7 @@ const port = process.env.PORT || 5000;
 
 app.use(cors({
   origin:["http://locsalhost:3000",
-    "https://unistayproject-frontend.onrender.com"
+    "https://unistay-client.onrender.com"
   ],credentials:true
 }));
 
