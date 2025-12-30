@@ -13,6 +13,31 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "UniStay API is running 🚀",
+    version: "1.0.0",
+    endpoints: {
+      auth: {
+        signup: "POST /signup",
+        login: "POST /login"
+      },
+      dorms: {
+        getAll: "GET /dorms",
+        getOne: "GET /dorm/:id",
+        add: "POST /addDorm",
+        delete: "DELETE /dorms/:id",
+        byOwner: "GET /dorms/owner/:owner_id",
+        search: "GET /dorms/search?q="
+      },
+      favorites: {
+        add: "POST /addFavorite",
+        getByUser: "GET /favorites/:userId"
+      }
+    }
+  });
+});
+
 // ================= MULTER =================
 
 const storage = multer.diskStorage({
