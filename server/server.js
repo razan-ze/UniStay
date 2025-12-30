@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(cors({
-  origin:["http://locsalhost:3000",
+  origin:["http://localhost:3000",
     "https://unistay-client.onrender.com"
   ],credentials:true
 }));
