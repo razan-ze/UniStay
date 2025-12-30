@@ -17,7 +17,7 @@ export const Favorites = () => {
     const fetchFavorites = async () => {
       try {
         const res = await axios.get(
-          `/favorites/${user.id}`
+          `${process.env.REACT_APP_API_URL}/favorites/${user.id}`
         );
         setFavorites(res.data);
       } catch (err) {

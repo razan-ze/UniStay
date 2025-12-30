@@ -18,7 +18,7 @@ const DormCard = ({ dorm, onDelete }) => {
   const handleDelete = async () => {
     if (window.confirm(`Are you sure you want to delete "${dorm.name}"?`)) {
       try {
-        await axios.delete(`/dorms/${dorm.id}`);
+        await axios.delete(`${process.env.REACT_APP_API_URL}/dorms/${dorm.id}`);
         onDelete(dorm.id); // remove from frontend
       } catch (err) {
         console.error(err);

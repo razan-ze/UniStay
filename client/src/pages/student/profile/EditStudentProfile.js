@@ -19,7 +19,7 @@ const EditProfile = () => {
     setError(null);
     try {
       // Send update to backend
-      const res = await axios.put(`/users/${user.id}`, {
+      const res = await axios.put(`${process.env.REACT_APP_API_URL}/users/${user.id}`, {
         address,
         phone,
       });

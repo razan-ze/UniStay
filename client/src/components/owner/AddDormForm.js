@@ -69,7 +69,7 @@ const { user } = useAuth();
       // Append images
       files.forEach((file) => formData.append("images", file));
 
-      await axios.post("/addDorm", formData);
+      await axios.post(`${process.env.REACT_APP_API_URL}/addDorm`, formData);
 
       alert("Dorm added successfully!");
       navigate("/owner-dashboard");

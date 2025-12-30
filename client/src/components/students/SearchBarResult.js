@@ -31,7 +31,7 @@ export const SearchResults = () => {
       setLoading(true);
       try {
         const res = await axios.get(
-          `/dorms/search?q=${encodeURIComponent(query)}`
+          `${process.env.REACT_APP_API_URL}/dorms/search?q=${encodeURIComponent(query)}`
         );
         setResults(res.data);
       } catch (err) {

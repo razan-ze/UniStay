@@ -23,7 +23,7 @@ export const DormDetails = () => {
   useEffect(() => {
     const fetchDorm = async () => {
       try {
-        const res = await axios.get(`/dorm/${id}`);
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/dorm/${id}`);
         if (res.data) {
           const imagesWithPrefix = res.data.images
             .filter(img => img)
@@ -54,7 +54,7 @@ export const DormDetails = () => {
     }
 
     try {
-      await axios.post("/addFavorite", {
+      await axios.post(`${process.env.REACT_APP_API_URL}/addFavorite`, {
         user_id: user.id,
         dorm_id: dorm.id,
       });

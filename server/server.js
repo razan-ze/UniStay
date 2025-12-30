@@ -28,6 +28,30 @@ const upload = multer({ storage: storage });
 // Serve static files from uploads
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "UniStay API is running 🚀",
+    version: "1.0.0",
+    endpoints: {
+      auth: {
+        signup: "POST /signup",
+        login: "POST /login"
+      },
+      dorms: {
+        getAll: "GET /dorms",
+        getOne: "GET /dorm/:id",
+        add: "POST /addDorm",
+        delete: "DELETE /dorms/:id",
+        byOwner: "GET /dorms/owner/:owner_id",
+        search: "GET /dorms/search?q="
+      },
+      favorites: {
+        add: "POST /addFavorite",
+        getByUser: "GET /favorites/:userId"
+      }
+    }
+  });
+});
 
 // ================= AUTH ===========================
 
