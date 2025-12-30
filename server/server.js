@@ -9,8 +9,12 @@ const db=require("./config/database");
 const app = express();
 const port = process.env.PORT || 5000;
 
+app.use(cors({
+  origin:["http://locsalhost:3000",
+    "https://unistayproject-frontend.onrender.com"
+  ],credentials:true
+}));
 
-app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
